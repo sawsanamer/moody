@@ -1,0 +1,56 @@
+svg{
+	
+	color: white;
+	font-size: 2em;
+		margin:  20px;
+	margin-left:70px; 
+	margin-right:0;
+
+}
+.logo{
+
+	font-size:40px;
+			margin:  10px; 
+
+}
+
+body{
+	
+	background: url('https://images.unsplash.com/photo-1519412203450-e04051dbb778?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+background-position: top right;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+.fas{
+	color: black;
+	size:100px;
+}
+h1{
+	color: white;
+	font-size: 60px;
+}
+.btn{
+
+	margin-top: 10px;
+	font-size: 20px;
+	border-radius: 15px;
+	padding-right:40px;
+		padding-left:40px; 
+	padding-top:10px;
+		padding-bottom:10px;
+
+
+
+}
+#lolLogo{
+	    text-decoration: none;
+
+}
+h4{
+	color:grey
+}
+
+.group{
+	margin: 50px
+	
+}
