@@ -2,7 +2,8 @@ var express= require("express");
 var app=express();
 const request = require('request');
 const axios = require('axios');
-
+var bodyParser= require('body-parser');
+app.use(express.urlencoded({limit: '25mb'}));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
@@ -113,14 +114,6 @@ var client_secret = '5ce28f20b265497db502a99f262cd7d3'; // Your secret
 
 
 
-app.get('/sad', function(req, res){
-	
-		hitTheApi("sad", "37i9dQZF1DX7qK8ma5wgG1", res)
-
-
-
-})
-
 
 
 app.get('/calm',async function(req, res){
@@ -130,6 +123,19 @@ app.get('/calm',async function(req, res){
 	
 
 })
+
+app.get('/sad', function(req, res){
+	
+		hitTheApi("sad", "37i9dQZF1DX7qK8ma5wgG1", res)
+
+
+
+})
+
+app.get('/',function(req, res){
+	res.render("home.ejs");
+})
+
 app.get('/index',function(req, res){
 	
 	
@@ -137,20 +143,17 @@ app.get('/index',function(req, res){
 })
 
 //////////////////////////////////////////////
-var bodyParser = require('body-parser')
-app.use( bodyParser.json() );   
+
 
 app.post('/picture', function(req, res) {
-    var picture = req.body;
-	console.log(picture);
+var d=	req.body
+	console.log("NAME:" +d.picture);
+	res.redirect("/")
   
 })
 
 
 
-app.get('/',function(req, res){
-	res.render("home");
-})
 
 
 app.listen(3000, function(){
