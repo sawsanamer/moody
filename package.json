@@ -17,6 +17,7 @@
     "request": "^2.88.2",
     "request-promise-lite": "^0.16.0",
     "util": "^0.12.3",
+    "webcam-easy": "^1.0.5",
     "youtube-search-without-api-key": "^1.0.2"
   }
 }

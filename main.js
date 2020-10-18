@@ -1,55 +1,27 @@
 var express= require("express");
 var app=express();
 const request = require('request');
-				
-	const axios = require('axios');
+const axios = require('axios');
 
- 
-var songData="{'title':'hey%20there%20delilah','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DPoaT6WXUV_M'},{'title':'im%20yours','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRILP53OR63k'}, {'title':'we%20are%20young','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKXJNoC6CuYE'}"
-/**
- * Given a search query, searching on youtube
- * @param {string} search value (string or videoId).
- */
 
- 
-
- 
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+app.use(express.static('webcam-easy-master/demo/style'))
+app.use(express.static('webcam-easy-master/demo/js'))
+app.use(express.static('webcam-easy-master/demo'))
+
+app.use(express.static('webcam-easy-master/dist'))
 
 
 
+
+
+//spotify api info
 var client_id = '152283c2b29e468ea2d120fe8e6e6659'; // Your client id
 var client_secret = '5ce28f20b265497db502a99f262cd7d3'; // Your secret
 
-// your application requests authorization
-var authOptions = {
-  url: 'https://accounts.spotify.com/api/token',
-  headers: {
-    'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
-  },
-  form: {
-    grant_type: 'client_credentials'
-  },
-  json: true
-}
-var authOptions2 = {
-  headers: {
-    'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
-  },
-  form: {
-    grant_type: 'client_credentials'
-  },
-  json: true
-}
 
-
-
-
-	function doRequest(stringObject){
-		
-	}
-	
 
 
  async function  hitTheApi(mood, playlistId, res){
@@ -92,7 +64,6 @@ var authOptions2 = {
 			 console.log(songName)
 	 var		EndcodedsongName =   encodeURIComponent(songName.trim()) 
 	   var 	EncodedsongArtist =  encodeURIComponent(songArtist.trim())
-						 console.log(EndcodedsongName)
 
 
 	
@@ -115,8 +86,6 @@ var authOptions2 = {
 		
 	
 		
-			console.log("STRING: "+stringObject)
-			console.log("VIDIO URLLLLLLLLLL  : "+ videoUrl)
 			
 		})
 			
@@ -144,7 +113,6 @@ var authOptions2 = {
 
 
 
-
 app.get('/sad', function(req, res){
 	
 		hitTheApi("sad", "37i9dQZF1DX7qK8ma5wgG1", res)
@@ -154,12 +122,28 @@ app.get('/sad', function(req, res){
 })
 
 
+
 app.get('/calm',async function(req, res){
 	
-	hitTheApi("calm", "0QuwKbJTNwMA9SLG4JgjN3", res)
+	hitTheApi("calm", "37i9dQZF1DXdPec7aLTmlC", res)
 
 	
 
+})
+app.get('/index',function(req, res){
+	
+	
+	res.render("/workspace/wdb/webcam-easy-master/demo/index.html");
+})
+
+//////////////////////////////////////////////
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );   
+
+app.post('/picture', function(req, res) {
+    var picture = req.body;
+	console.log(picture);
+  
 })
 
 
