@@ -6,7 +6,7 @@ var bodyParser= require('body-parser');
 app.use(express.urlencoded({limit: '25mb'}));
 
 app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(express.static('webcam-easy-master/demo/style'))
 app.use(express.static('webcam-easy-master/demo/js'))
@@ -83,29 +83,17 @@ var client_secret = '5ce28f20b265497db502a99f262cd7d3'; // Your secret
 		else{
 	stringObject=		stringObject.concat(",{'title':'"+EndcodedsongName+ "%20-%20"+EncodedsongArtist+"','url':'"+videoUrl+"'}")
 			
-		}
-		
-	
-		
+		}		
 			
 		})
 			
 } 
-			
-		
-
-
-
 	}).then(function () {
 			console.log("DATA TO PASS: "+stringObject)
 	 	res.render(mood, {songData: stringObject})
 
 
  });
-	  
-	  
-
-  
 }).catch((err) => console.log(err));;
 
 
@@ -118,7 +106,7 @@ var client_secret = '5ce28f20b265497db502a99f262cd7d3'; // Your secret
 
 app.get('/calm',async function(req, res){
 	
-	hitTheApi("calm", "37i9dQZF1DXdPec7aLTmlC", res)
+	hitTheApi("calm.ejs", "37i9dQZF1DXdPec7aLTmlC", res)
 
 	
 
@@ -126,8 +114,33 @@ app.get('/calm',async function(req, res){
 
 app.get('/sad', function(req, res){
 	
-		hitTheApi("sad", "37i9dQZF1DX7qK8ma5wgG1", res)
+		hitTheApi("sad.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
 
+
+
+})
+
+app.get('/happy', function(req, res){
+	
+	// hitTheApi("happy.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
+
+	res.render('happy.ejs');
+
+
+})
+
+app.get('/surprised', function(req, res){
+	
+	hitTheApi("surprised.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
+
+
+
+})
+
+app.get('/angry', function(req, res){
+	
+	//hitTheApi("angry.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
+res.render('angry.ejs');
 
 
 })
@@ -146,9 +159,14 @@ app.get('/index',function(req, res){
 
 
 app.post('/picture', function(req, res) {
-var d=	req.body
-	console.log("NAME:" +d.picture);
-	res.redirect("/")
+var picture=	req.body.picture
+
+	const spawn = require("child_process").spawn;
+const pythonProcess = spawn('python',["./emotion.py", 'jj']);
+
+pythonProcess.stdout.on('data', (emotion) => {
+console.log("FROM NODEE"+ emotion)
+});
   
 })
 
@@ -156,6 +174,7 @@ var d=	req.body
 
 
 
-app.listen(3000, function(){
+
+app.listen(3002, function(){
 	console.log("listen here"); 
 });

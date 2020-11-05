@@ -13,6 +13,7 @@
     "body-parser": "^1.19.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "node-url-shortener": "^1.1.11",
     "querystring": "^0.2.0",
     "request": "^2.88.2",
     "request-promise-lite": "^0.16.0",
