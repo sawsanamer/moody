@@ -11,6 +11,7 @@ app.use(express.static("public"));
 app.use(express.static('webcam-easy-master/demo/style'))
 app.use(express.static('webcam-easy-master/demo/js'))
 app.use(express.static('webcam-easy-master/demo'))
+app.use(express.static('javascript'))
 
 app.use(express.static('webcam-easy-master/dist'))
 
@@ -114,9 +115,9 @@ app.get('/calm',async function(req, res){
 
 app.get('/sad', function(req, res){
 	
-		hitTheApi("sad.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
+	//	hitTheApi("sad.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
 
-
+		res.render('sad.ejs');
 
 })
 
@@ -131,8 +132,9 @@ app.get('/happy', function(req, res){
 
 app.get('/surprised', function(req, res){
 	
-	hitTheApi("surprised.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
+//	hitTheApi("surprised.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
 
+res.render('surprised.ejs');
 
 
 })
@@ -165,13 +167,35 @@ var picture=	req.body.picture
 const pythonProcess = spawn('python',["./emotion.py", 'jj']);
 
 pythonProcess.stdout.on('data', (emotion) => {
-console.log("FROM NODEE"+ emotion)
+console.log("FROM NODEE"+  emotion.toString().replace(/(\r\n|\n|\r)/gm,"")+ "P")
+redirection(emotion.toString().replace(/(\r\n|\n|\r)/gm,""), res)
 });
   
 })
 
+app.get("/loading", function(req, res){
+
+	res.render("loading.ejs")
+})
 
 
+function redirection(emotion, res){
+if (emotion=="sad"){
+	res.redirect("/sad");
+}
+else if(emotion=="happy"){
+	res.redirect("/happy");
+}
+else if(emotion=="neutral"){
+	res.redirect("/calm");
+}
+else if(emotion=="surprise"){
+	res.redirect("/surprised");
+}
+else if(emotion=="angry"){
+	res.redirect("/angry");
+}
+}
 
 
 

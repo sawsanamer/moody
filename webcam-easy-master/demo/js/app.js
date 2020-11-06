@@ -85,9 +85,9 @@ a.click();
 		   document.querySelector('#download-photo').href = picture;
 
     afterTakePhoto();
-post('/picture/', {picture: picture});
+// post('/picture/', {picture: picture});
 
-	
+	post('/loading',{},'get');
 	
  
 });
