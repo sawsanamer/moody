@@ -3,17 +3,20 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="calm.css">
+<link rel="stylesheet" href="shared.css">
+	
+<link rel="stylesheet" href="calm.css">
 		<script type="text/javascript" src="audio.js"></script>
+		<script type="text/javascript" src="break_from_previous_iframe.js"></script>
 
 		
 		<title>home</title>
 	</head>
 	
 	<body >
-		<!-- Wikplayer https://www.wikplayer.com -->
+<!-- Wikplayer https://www.wikplayer.com -->
 <script type="text/javascript" src="https://www.wikplayer.com/code.js" 
-data-config="{'skin':'skins/wikfull/plainBlack/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'showcomment':false,'marqueetexton':true,'placement':'bottom','showplaylist':true,'playlist':[<%=songData%>]}" ></script>
+data-config="{'skin':'skins/wikfull/ribbonBlue/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'showcomment':false,'marqueetexton':true,'placement':'bottom','showplaylist':true,'playlist':[{'title':'manu','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX5dGRM7Fw88'},{'title':'(SAMPLE)%20Canon%20in%20D%20-%20Pachelbel','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMK6heUdRr-E'}]}" ></script>
 <!-- Wikplayer code end -->
 
 <div class='row'>
@@ -42,11 +45,25 @@ data-config="{'skin':'skins/wikfull/plainBlack/skin.css','volume':50,'autoplay':
 
 
 
-		<h1>Feeling calm..</h1>
+		<h3>Feeling calm..</h3>
 		<h4>Changed your mood?</h4>
-<button class="btn btn-danger plr-xl-5">
-	Open Your Camera
-		</button>
+		<a href="/index">
+			<button class="camera_btn btn btn-warning plr-xl-5">
+				Open Your Camera
+			</button>
+		</a>
+			<p> or choose your mood </p>
+			<a href="/happy"> <button class="btn btn-info mood_btn  btn-sm" id="happy">Happy</button>
+			</a>
+			<a href="/sad"> <button class="btn btn-info mood_btn  btn-sm" id="sad"> Sad </button>
+			</a>
+			<a href="/calm"> <button class="btn btn-info mood_btn btn-sm" id="calm">Calm </button>
+			</a>
+			<a href="/angry"> <button class="btn btn-info mood_btn btn-sm" id="angry">Angry </button>
+			</a>
+			<a href="/surprised"> <button class="btn btn-info mood_btn btn-sm" id="surprised">Surprised </button>
+			</a>
+	
 					</div>
 
 		

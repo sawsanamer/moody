@@ -1,18 +1,4 @@
-svg{
-	
-	color: white;
-	font-size: 2em;
-		margin:  20px;
-	margin-left:70px; 
-	margin-right:0;
 
-}
-.logo{
-
-	font-size:40px;
-			margin:  10px; 
-
-}
 
 body{
 	
@@ -21,36 +7,45 @@ background-position: top right;
 	background-repeat: no-repeat;
 	background-size: cover; 
 }
-.fas{
-	color: black;
-	size:100px;
-}
+
 h1{
 	color: white;
-	font-size: 60px;
+	font-size: 45px;
 }
-.btn{
-
-	margin-top: 10px;
-	font-size: 20px;
-	border-radius: 15px;
-	padding-right:40px;
-		padding-left:40px; 
-	padding-top:10px;
-		padding-bottom:10px;
-
-
-
+h3{
+	color:white;
+	font-size: 45px;
 }
-#lolLogo{
-	    text-decoration: none;
 
-}
+
 h4{
 	color:grey
 }
 
+.camera_btn{
+
+	padding-right:60px;
+		padding-left:60px; 
+
+}
+p{
+	
+color:white;
+opacity: 0.4;
+}
+
+#angry, #surprised, #sad, #calm, #happy {
+	background-color:#312438;
+	border-color: #312438;
+  
+  }
+  
 .group{
 	margin: 50px
 	
 }
+   p:before,  p:after{ 
+	color:white;
+}
+
+

@@ -107,8 +107,8 @@ var client_secret = '5ce28f20b265497db502a99f262cd7d3'; // Your secret
 
 app.get('/calm',async function(req, res){
 	
-	hitTheApi("calm.ejs", "37i9dQZF1DXdPec7aLTmlC", res)
-
+	// hitTheApi("calm.ejs", "37i9dQZF1DXdPec7aLTmlC", res)
+res.render("calm.ejs")
 	
 
 })
@@ -174,6 +174,7 @@ redirection(emotion.toString().replace(/(\r\n|\n|\r)/gm,""), res)
 app.get("/loading", function(req, res){
 	res.render("loading.ejs")
 })
+
 
 app.post("/loading", function(req, res){
 	 picture_name=req.body.name;
