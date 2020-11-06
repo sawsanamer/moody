@@ -160,7 +160,6 @@ app.get('/index',function(req, res){
 
 
 app.post('/picture', function(req, res) {
-var picture=	req.body.picture
 
 	const spawn = require("child_process").spawn;
 const pythonProcess = spawn('python',["./emotion.py", picture_name]);
