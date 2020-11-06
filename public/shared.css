@@ -59,3 +59,11 @@ span {
   a{
 	text-decoration: none !important;
 }
+
+h3{
+    color: white;
+	font-size: 45px;
+}
+h4{
+	color:grey
+}

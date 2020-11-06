@@ -11,17 +11,19 @@ h1{
 	color: white;
 	font-size: 70px;
 }
-h3{
-	color: white;
-	font-size: 45px;
-}
-
-h4{
-	color:grey
-}
 
 #angry, #surprised, #sad, #calm, #happy {
 	background-color:#FF4143;
 	border-color: #FF4143;
   
   }
+  p{
+	
+	color:white;
+	opacity: 0.6;
+	}
+
+	p:before,  p:after{ 
+		color:white;
+	}
+	

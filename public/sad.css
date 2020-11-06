@@ -12,15 +12,7 @@ h1{
 	color: white;
 	font-size: 45px;
 }
-h3{
-	color:white;
-	font-size: 45px;
-}
 
-
-h4{
-	color:grey
-}
 
 .camera_btn{
 
@@ -44,8 +36,7 @@ opacity: 0.4;
 	margin: 50px
 	
 }
-   p:before,  p:after{ 
+p:before,  p:after{ 
 	color:white;
 }
-
 

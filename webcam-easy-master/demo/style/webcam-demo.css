@@ -69,7 +69,7 @@
     margin-right: .5rem;
     width: 60px;
     height: 30px;
-    background-color: #e6e6e6;
+    background-color: #000000;
     border-radius: 25px;
     vertical-align: text-bottom;
     transition: all 0.3s linear;
@@ -81,7 +81,7 @@
     left: 0;
     width: 56px;
     height: 25px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 15px;
     transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
     transition: all 0.25s linear;
@@ -110,13 +110,13 @@
   
   .form-switch input { display: none; }
   
-  .form-switch input:checked + i { background-color: #4BD763; }
+  .form-switch input:checked + i { background-color: black; }
   
   .form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
   
   .form-switch input:checked + i::after { transform: translate3d(30px, 2px, 0); }
 
-  .form-switch input:disabled + i { background-color: #eeeeee; cursor: not-allowed; }
+  .form-switch input:disabled + i { background-color: black; cursor: not-allowed; }
 
   .form-switch input:disabled + i::after {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.10);
@@ -191,7 +191,7 @@
   }
   
   .md-show.md-effect-12 ~ .md-overlay {
-      background-color: #e4f0e3;
+      background-color: black;
   } 
   
   .md-effect-12 .md-content h3,
@@ -268,7 +268,7 @@
   left:0;
   width:100%;
   height:100%;
-  background-color:#fff;
+  background-color:black;
   z-index: 999999;
 }
 
