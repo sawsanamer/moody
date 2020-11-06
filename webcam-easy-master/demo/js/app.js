@@ -4,6 +4,11 @@ const canvasElement = document.getElementById('canvas');
 
 const snapSoundElement = document.getElementById('snapSound');
 
+function generateID () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  };
+
+
 const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
   $('.md-modal').addClass('md-show');
         webcam.start()
@@ -73,15 +78,10 @@ $("#take-photo").click(function () {
     let picture = webcam.snap();
     a = document.createElement('a');
 document.body.appendChild(a);
+name=generateID()+".png"
 a.download = name;
 a.href = picture;
 a.click();
-// 	$.ajax({
-//   type: "POST",
-//   url: '/picture',
-//   data: {picture:"fsadf"},
-//   dataType: 'json'
-// });
 		   document.querySelector('#download-photo').href = picture;
 
     afterTakePhoto();

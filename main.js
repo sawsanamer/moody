@@ -8,12 +8,12 @@ app.use(express.urlencoded({limit: '25mb'}));
 app.engine('html', require('ejs').renderFile);
 //app.set('view engine', 'ejs');
 app.use(express.static("public"));
-app.use(express.static('webcam-easy-master/demo/style'))
-app.use(express.static('webcam-easy-master/demo/js'))
-app.use(express.static('webcam-easy-master/demo'))
+app.use(express.static('D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-easy-master\\demo\\style'))
+app.use(express.static('D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-easy-master\\demo\\js'))
 app.use(express.static('javascript'))
 
-app.use(express.static('webcam-easy-master/dist'))
+
+app.use(express.static('D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-easy-master\\dist'))
 
 
 
@@ -153,8 +153,7 @@ app.get('/',function(req, res){
 
 app.get('/index',function(req, res){
 	
-	
-	res.render("/workspace/wdb/webcam-easy-master/demo/index.html");
+	res.render("D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-easy-master\\demo\\index.html");
 })
 
 //////////////////////////////////////////////
