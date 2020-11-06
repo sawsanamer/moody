@@ -14,7 +14,7 @@ app.use(express.static('javascript'))
 
 
 app.use(express.static('D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-easy-master\\dist'))
-
+var picture_name="";
 
 
 
@@ -163,7 +163,7 @@ app.post('/picture', function(req, res) {
 var picture=	req.body.picture
 
 	const spawn = require("child_process").spawn;
-const pythonProcess = spawn('python',["./emotion.py", 'jj']);
+const pythonProcess = spawn('python',["./emotion.py", picture_name]);
 
 pythonProcess.stdout.on('data', (emotion) => {
 console.log("FROM NODEE"+  emotion.toString().replace(/(\r\n|\n|\r)/gm,"")+ "P")
@@ -173,9 +173,15 @@ redirection(emotion.toString().replace(/(\r\n|\n|\r)/gm,""), res)
 })
 
 app.get("/loading", function(req, res){
-
 	res.render("loading.ejs")
 })
+
+app.post("/loading", function(req, res){
+	 picture_name=req.body.name;
+	console.log("SDFAF "+ req.body.name)
+	res.redirect("/loading")
+	
+	})
 
 
 function redirection(emotion, res){
@@ -193,6 +199,9 @@ else if(emotion=="surprise"){
 }
 else if(emotion=="angry"){
 	res.redirect("/angry");
+}else{
+	res.redirect("/home");
+
 }
 }
 

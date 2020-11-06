@@ -87,7 +87,7 @@ a.click();
     afterTakePhoto();
 // post('/picture/', {picture: picture});
 
-	post('/loading',{},'get');
+	post('/loading',{name:name}, "post");
 	
  
 });

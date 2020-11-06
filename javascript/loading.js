@@ -29,4 +29,4 @@ function post(path, params, method='post') {
 }
 
 
-  post('/picture/',{picture:"jo"}, 'post');
+  post('/picture/',{}, 'post');
