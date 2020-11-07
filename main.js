@@ -12,6 +12,8 @@ app.use(express.static('D:\\Desktop\\moody-master\\moody-master\\moody\\webcam-e
 
 
 var picture_name="";
+var mood="";
+var songdata="";
 
 app.get('/',function(req, res){
 	res.render("home.ejs");
@@ -32,12 +34,11 @@ app.get('/sad', function(req, res){
 	
 		hitTheApi("sad.ejs", "37i9dQZF1DX7qK8ma5wgG1", res)
 
-
 })
 
 app.get('/happy', function(req, res){
 	
-	 hitTheApi("happy.ejs", "37i9dQZF1DXdPec7aLTmlC", res)
+	 hitTheApi("happy.ejs", "37i9dQZF1DWSf2RDTDayIx", res)
 
 
 
@@ -53,7 +54,7 @@ hitTheApi("surprised.ejs", "6p21dRudS9FmcyGvKWPq2R", res)
 
 app.get('/angry', function(req, res){
 	
-	hitTheApi("angry.ejs", "37i9dQZF1DX9qNs32fujYe", res)
+hitTheApi("angry.ejs", "37i9dQZF1DX9qNs32fujYe", res)
 
 
 })
@@ -61,7 +62,7 @@ app.get('/angry', function(req, res){
 
 
 app.get('/unsuccessful',function(req, res){
-	res.render("unsuccessful.ejs");
+	res.render("loading2.ejs",{mood: "index"});
 })
 
 app.get("/loading", function(req, res){
@@ -88,6 +89,20 @@ redirection(emotion.toString().replace(/(\r\n|\n|\r)/gm,""), res)
 });
   
 })
+
+
+app.post("/loading2", function(req, res){
+	mood=req.body.mood;
+
+   console.log("lll "+ req.body.mood)
+   res.redirect("/loading2")
+   
+   })
+
+
+   app.get("/loading2", function(req, res){
+res.render("loading2.ejs",{mood:mood})
+   })
 
 
 app.post("/loading", function(req, res){

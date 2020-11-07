@@ -51,7 +51,7 @@ module.exports = function() {
 
 	
 	await	axios({
-          url: "https://www.googleapis.com/youtube/v3/search?q="+EndcodedsongName+ EncodedsongArtist+ "&type=video&key=AIzaSyA_UOn4yoN6-KteSrMeIZoSFwb-B9nQKHI",
+          url: "https://www.googleapis.com/youtube/v3/search?q="+EndcodedsongName+ EncodedsongArtist+ "&type=video&key=AIzaSyAmfT1NTEyO4ka1GK0EY9jQKVPuG9dOnsM",
         method: 'get',
    
       }).then(function (body2){			
@@ -73,8 +73,7 @@ module.exports = function() {
 } 
 	}).then(function () {
 			console.log("DATA TO PASS: "+stringObject)
-	 	res.render(mood, {songData: stringObject})
-
+		res.render(mood, {songData: stringObject})
 
  });
 }).catch((err) => console.log(err));;

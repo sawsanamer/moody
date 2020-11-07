@@ -9,7 +9,6 @@
 		crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="shared.css">
 	<link rel="stylesheet" href="angry.css">
-	<script type="text/javascript" src="break_from_previous_iframe.js"></script>
 
 
 	<title>Angry Songs</title>
@@ -52,16 +51,17 @@ data-config="{'skin':'skins/wikfull/plainBlack/skin.css','volume':50,'autoplay':
 			</button>
 		</a>
 			<p> or choose your mood </p>
-			<a href="/happy"> <button class="btn btn-danger mood_btn  btn-sm" id="happy">Happy</button>
-			</a>
-			<a href="/sad"> <button class="btn btn-danger mood_btn  btn-sm" id="sad"> Sad </button>
-			</a>
-			<a href="/calm"> <button class="btn btn-danger mood_btn btn-sm" id="calm">Calm </button>
-			</a>
-			<a href="/angry"> <button class="btn btn-danger mood_btn btn-sm" id="angry">Angry </button>
-			</a>
-			<a href="/surprised"> <button class="btn btn-danger mood_btn btn-sm" id="surprised">Surprised </button>
-			</a>
+			<form method="post" action="/loading2"><input type="hidden" value="happy" name="mood"> <button class="btn btn-danger mood_btn  btn-sm" id="happy">Happy</button>
+			</form>
+			<form method="post" action="/loading2"><input type="hidden" value="sad" name="mood"> <button class="btn btn-danger mood_btn  btn-sm" id="sad" value="="sad"> Sad </button>
+			</form>
+			
+			<form method="post" action="/loading2"><input type="hidden" value="calm" name="mood"> <button class="btn btn-danger mood_btn btn-sm" id="calm">Calm </button>
+			</form>
+			<form method="post" action="/loading2"><input type="hidden" value="angry" name="mood"><button class="btn btn-danger mood_btn btn-sm" id="angry">Angry </button>
+			</form>
+			<form method="post" action="/loading2"><input type="hidden" value="surprised" name="mood"> <button class="btn btn-danger mood_btn btn-sm" id="surprised">Surprised </button>
+			</form>
 	
 	</div>
 

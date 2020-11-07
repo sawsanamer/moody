@@ -50,16 +50,18 @@
 
 		</a>
 		<p> or choose your mood </p>
-		<a href="/happy"> <button class="btn btn-success mood_btn  btn-sm" id="happy">Happy</button>
-		</a>
-		<a href="/sad"> <button class="btn btn-dark mood_btn  btn-sm"> Sad </button>
-		</a>
-		<a href="/calm"> <button class="btn btn-info mood_btn btn-sm" id="calm">Calm </button>
-		</a>
-		<a href="/angry"> <button class="btn btn-danger mood_btn btn-sm" id="angry">Angry </button>
-		</a>
-		<a href="/surprised"> <button class="btn btn-info mood_btn btn-sm" id="surprised">Surprised </button>
-		</a>
+		
+		<form method="post" action="/loading2"><input type="hidden" value="happy" name="mood"> <button class="btn btn-success mood_btn  btn-sm" id="happy">Happy</button>
+		</form>
+		<form method="post" action="/loading2"><input type="hidden" value="sad" name="mood"> <button class="btn btn-success mood_btn  btn-sm" id="sad" value="="sad"> Sad </button>
+		</form>
+		
+		<form method="post" action="/loading2"><input type="hidden" value="calm" name="mood"> <button class="btn btn-info mood_btn btn-sm" id="calm">Calm </button>
+		</form>
+		<form method="post" action="/loading2"><input type="hidden" value="angry" name="mood"><button class="btn btn-danger mood_btn btn-sm" id="angry">Angry </button>
+		</form>
+		<form method="post" action="/loading2"><input type="hidden" value="surprised" name="mood"> <button class="btn btn-info mood_btn btn-sm" id="surprised">Surprised </button>
+		</form>
 
 
 

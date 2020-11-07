@@ -67,3 +67,9 @@ h3{
 h4{
 	color:grey
 }
+input{
+	display: inline;
+}
+form{
+	display: inline;
+}

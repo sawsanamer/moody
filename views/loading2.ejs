@@ -1,0 +1,59 @@
+<html>
+
+
+<head>
+    <script type="text/javascript" src="break_from_previous_iframe.js"></script>
+
+    <script>
+
+ 
+   if ('<%=mood%>'=="index")
+        setTimeout(function () {
+           // after 2 seconds
+           window.location = "/<%=mood%>";
+        }, 3000)
+        else{
+            setTimeout(function () {
+           // after 2 seconds
+           window.location = "/<%=mood%>";
+        }, 500)
+        }
+
+
+       
+      </script>
+      <% if  (mood=="index") {%>
+    <title>Emotion undetected..</title>
+
+    <%} else{ %>
+    <title>loading..</title>
+    <%} %>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>body{
+	
+	background: url('https://www.itl.cat/pngfile/big/6-60813_kann-man-in-windows-10-ein-gif-als.gif');
+background-position:  center ;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+h1{
+    color: blanchedalmond;
+text-align: center;
+padding-top: 360;
+margin:auto auto;
+}
+</style>
+</head>
+
+
+<body>
+    <% if  (mood=="index") {%>
+    <h1>Emotion undetected, please try again..</h1>
+    <%} else{ %>
+        <h1>loading..</h1>
+        <%} %>
+
+</body>
+</html>
