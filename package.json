@@ -1,0 +1,26 @@
+{
+  "name": "wdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-url-shortener": "^1.1.11",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2",
+    "request-promise-lite": "^0.16.0",
+    "util": "^0.12.3",
+    "webcam-easy": "^1.0.5",
+    "youtube-search-without-api-key": "^1.0.2"
+  }
+}

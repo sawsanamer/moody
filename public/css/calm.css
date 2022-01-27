@@ -1,0 +1,20 @@
+
+body{
+	
+	background: url('https://images.unsplash.com/photo-1443397646383-16272048780e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');
+background-position: top ;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+.camera_btn{
+	background-color: #a37700;
+	border-color: #a37700;
+	color:white
+
+	
+}
+#angry, #surprised, #sad, #calm, #happy {
+	background-color:#025078;
+	border-color: #025078;
+  
+  }

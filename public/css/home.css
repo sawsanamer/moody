@@ -1,0 +1,54 @@
+
+
+body{
+	
+	background: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-color: #FFC901;
+}
+
+h2{
+	color: white;
+	font-size: 50px;
+}
+
+h4{
+	color:grey;
+	font-size: 20;
+}
+
+
+.camera_btn{
+	background-color: rgb(223, 71, 89);
+	border-color: rgb(223, 71, 89);
+	color:white
+
+	
+}
+#surprised{
+	background-color:	#17a2b8;
+	border-color: 	#17a2b8;
+}
+
+#sad{
+	background-color:#343a40;
+	border-color: #343a40;
+}
+  #calm {
+	  background-color:#025078;
+	  border-color: #025078;
+
+  }
+  #happy {
+	background-color:#84db74;
+	border-color: #84db74;
+
+}
+#angry {
+	background-color:#d95957;
+	border-color: #d95957;
+
+}
+

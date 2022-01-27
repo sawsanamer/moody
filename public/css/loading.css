@@ -1,0 +1,13 @@
+body{
+	
+	background: url('https://www.itl.cat/pngfile/big/6-60813_kann-man-in-windows-10-ein-gif-als.gif');
+background-position:  center ;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+h1{
+    color: blanchedalmond;
+text-align: center;
+padding-top: 360;
+margin:auto auto;
+}

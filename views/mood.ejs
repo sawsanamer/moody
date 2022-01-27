@@ -1,0 +1,20 @@
+<%- include ('partials/header') %>
+	<link rel="stylesheet" href="/css/shared.css">
+	<link rel="stylesheet" href="/css/<%=mood%>.css">
+	<title>home</title>
+	</head>
+
+	<body>
+		<!-- Wikplayer https://www.wikplayer.com -->
+		<script type="text/javascript" src="https://www.wikplayer.com/code.js"
+			data-config="{'skin':'skins/wikfull/<%= mood=='calm'? 'ribbonBlue':mood=='happy'?'ribbonGreen':mood=='surprised'?'ribbonOrange': 'plainBlack'%>/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'showcomment':false,'marqueetexton':true,'placement':'bottom','showplaylist':true,'playlist':[<%=songData%>]}"></script>
+		<!-- Wikplayer code end -->
+		<%- include ('partials/logo') %>
+			<div class="group">
+				<h3>Feeling <%=mood%>..</h3>
+				<h4>Changed your mood?</h4>
+				<%- include ('partials/moodOptions') %>
+			</div>
+	</body>
+
+	</html>

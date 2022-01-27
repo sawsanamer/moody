@@ -1,0 +1,20 @@
+<%- include ('partials/header') %>
+   <script src="/javascript/break_from_previous_iframe.js"></script>
+   <link rel="stylesheet" href="/css/loading.css">
+   <script src="/javascript/redirect_methods.js"></script>
+
+   <script>
+      let mood = `<%=mood%>`;
+      if (mood == "")
+         detectEmotion()
+      else
+         sendToMoodPage(mood)
+   </script>
+   <title>loading..</title>
+   </head>
+
+   <body>
+      <h1>loading..</h1>
+   </body>
+
+   </html>

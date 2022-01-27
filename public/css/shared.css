@@ -1,0 +1,82 @@
+
+svg{
+	
+	color: white;
+	font-size: 2em;
+		margin:  20px;
+	margin-left:70px; 
+	margin-right:0;
+
+}
+.logo{
+
+	font-size:40px;
+			margin:  10px; 
+
+}
+
+.group{
+	margin: 50 60 50 60
+	
+}
+
+#lolLogo{
+    text-decoration: none;
+
+}
+.camera_btn{
+
+	margin-top: 10px;
+	font-size: 20px;
+	border-radius: 15px;
+	padding-right:65px;
+		padding-left:65px; 
+	padding-top:10px;
+		padding-bottom:10px;
+
+}
+p{
+	font-size: 10;
+	margin-top: 10;
+opacity: 0.6;
+margin-left: 5;
+}
+
+p:before,  p:after {
+	content: "\2014\2014\2014\2014\2014\2014\2014\2014\2014";
+	opacity: 0.2;
+}​
+span {
+	display:inline-block;
+	border-bottom: 1px solid black;
+	line-height:0
+  }
+
+  .mood_btn{
+	border-radius: 10px;
+  
+  }
+  a{
+	text-decoration: none !important;
+}
+
+h3{
+    color: white;
+	font-size: 45px;
+}
+h4{
+	color:grey
+}
+input{
+	display: inline;
+}
+form{
+	display: inline;
+}
+
+
+h1{
+	color: white;
+	font-size: 70px;
+}
+

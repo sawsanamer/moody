@@ -1,0 +1,20 @@
+
+body{
+	
+	background: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80');
+background-position: top ;
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+h3{
+    opacity: 0.7;
+}
+
+
+  .camera_btn{
+	background-color:#FF4143;
+	border-color: #FF4143;
+	color: white;
+  
+	
+}
